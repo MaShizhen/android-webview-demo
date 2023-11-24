@@ -1,12 +1,10 @@
-Kotori Web App
-=======
+# Kotori Web App
 
 Web App for https://kotori.love.
 
-
 ## How to use the source code?
 
-Just import it with your __Android Studio__.
+Just import it with your **Android Studio**.
 
 ## APK Download
 
@@ -15,3 +13,15 @@ Just import it with your __Android Studio__.
 ## License:
 
 MIT
+
+## 使用说明
+
+Android Sdk 和 build tools 使用 android-studio 进行安装
+
+打包项目
+
+```bash
+docker-compose up -d
+ docker exec -it webview-demo bash
+./gradlew assembleDebug
+```

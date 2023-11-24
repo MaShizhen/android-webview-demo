@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  java8:
+    image: openjdk:8-jdk
+    container_name: webview-demo
+    volumes:
+      - ./:/app
+      - ./.gradle:/root/.gradle
+      - ~/Android/Sdk:/home/user/Android/Sdk
+    environment:
+      - HTTP_PROXY=http://host.docker.internal:7890
+      - HTTPS_PROXY=http://host.docker.internal:7890
+      - ANDROID_HOME=/home/user/Android/Sdk
+      - PATH=/home/user/Android/Sdk/platform-tools:/home/user/Android/Sdk/emulator:$PATH
+    working_dir: /app
+    command: /bin/bash -c "tail -f /dev/null"
